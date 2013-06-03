@@ -304,14 +304,14 @@ class GArea(gtk.Table):
 		cr.save()
 		cr.set_line_width(0.75)
 		cr.set_dash([1.0, 5.0])
-		#горизонтальные линии
+		#горизонтальные штриховые линии
 		ystep=float(h)/VSTEPS
 		y=ystep
 		while y<h-1:
 			cr.move_to(0, y)
 			cr.rel_line_to(w, 0)
 			y+=ystep
-		#вертикальные линии
+		#вертикальные штриховые линии
 		x, xstep=self.truler.step_in_pix(w)
 		while x<w-1:
 			cr.move_to(x, 0)
